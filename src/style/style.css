@@ -1,0 +1,65 @@
+.UserIcon {
+    height: 50px;
+    width: 50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+.flex-container>div {
+    width: 18%;
+    margin: 10px;
+    text-align: center;
+    min-width: 235px;
+}
+
+.bg-secondary-light {
+    background: rgb(236, 234, 234);
+}
+
+.task-priority {
+    height: 25px;
+    width: 25px;
+    color: white;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.bg-blue {
+    background: rgb(5, 88, 177);
+}
+
+.text-color {
+    color: rgb(32, 32, 32);
+}
+
+.task-description {
+    border-top: 1px solid rgb(77, 76, 76);
+    text-align: justify;
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 575px) {
+    .addTaskbtn-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.addTaskbtn-div>button {
+    min-width: 80%;
+}
+
+.addTaskBtn:hover {
+    background: rgb(5, 88, 177);
+}
+.card-btn:hover{
+    background: rgb(5, 88, 177);
+
+}
