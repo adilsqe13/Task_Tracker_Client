@@ -89,7 +89,7 @@ export default function EditTaskModal() {
                                         {(taskDetails.status === 'assign' || taskDetails.status === 'inProgress') && <option name='inProgress' value="inProgress">In Progress</option>}
                                         {(taskDetails.status === 'assign' || taskDetails.status === 'inProgress' || taskDetails.status === 'completed') && <option name='completed' value="completed">Completed</option>}
                                         {(taskDetails.status === 'completed' || taskDetails.status === 'deployed') && <option name='deployed' value="deployed">Deployed</option>}
-                                        {(taskDetails.status === 'completed' || taskDetails.status === 'deployed') && <option name='deffered' value="deffered">Deffered</option>}
+                                        {(taskDetails.status === 'completed' || taskDetails.status === 'deployed' || taskDetails.status === 'deffered') && <option name='deffered' value="deffered">Deffered</option>}
                                     </select>
                                 </div>
                             </div>

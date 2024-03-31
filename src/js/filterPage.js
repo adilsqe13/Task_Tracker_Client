@@ -13,43 +13,57 @@ const filterPage = async (tasks, setTasks, getAllTasks, filter) => {
             el.assignees.toUpperCase() === filter.assigneeName.toUpperCase()
         );
         setTasks(filteredTasks)
-        alert(`${filteredTasks.length} Result Found`);
+        setTimeout(() => {
+            alert(`${filteredTasks.length} Result Found`);
+        }, 1000);
     } else if (filter.assigneeName === '' && filter.priority !== '' && filter.start_date === '' && filter.end_date === '') {
         const filteredTasks = tasks.filter((el) =>
             el.priority === filter.priority
         );
         setTasks(filteredTasks)
-        alert(`${filteredTasks.length} Result Found`);
+        setTimeout(() => {
+            alert(`${filteredTasks.length} Result Found`);
+        }, 1000);
     } else if (filter.assigneeName !== '' && filter.priority !== '' && filter.start_date === '' && filter.end_date === '') {
         const filteredTasks = tasks.filter((el) =>
         (el.assignees.toUpperCase() === filter.assigneeName.toUpperCase() &&
             el.priority === filter.priority)
         );
         setTasks(filteredTasks)
-        alert(`${filteredTasks.length} Result Found`);
+        setTimeout(() => {
+            alert(`${filteredTasks.length} Result Found`);
+        }, 1000);
     } else if (filter.assigneeName === '' && filter.priority === '' && filter.start_date !== '' && filter.end_date !== '') {
         const filteredTasks = tasks.filter((el) => dateFilter(el));
         setTasks(filteredTasks)
-        alert(`${filteredTasks.length} Result Found`);
+        setTimeout(() => {
+            alert(`${filteredTasks.length} Result Found`);
+        }, 1000);
     } else if (filter.assigneeName !== '' && filter.priority === '' && filter.start_date !== '' && filter.end_date !== '') {
         const filteredTasks = tasks.filter((el) =>
             dateFilter(el) &&
             el.assignees.toUpperCase() === filter.assigneeName.toUpperCase());
         setTasks(filteredTasks)
-        alert(`${filteredTasks.length} Result Found`);
+        setTimeout(() => {
+            alert(`${filteredTasks.length} Result Found`);
+        }, 1000);
     } else if (filter.assigneeName === '' && filter.priority !== '' && filter.start_date !== '' && filter.end_date !== '') {
         const filteredTasks = tasks.filter((el) =>
             dateFilter(el) &&
             el.priority === filter.priority);
         setTasks(filteredTasks)
-        alert(`${filteredTasks.length} Result Found`);
+        setTimeout(() => {
+            alert(`${filteredTasks.length} Result Found`);
+        }, 1000);
     } else if (filter.assigneeName !== '' && filter.priority !== '' && filter.start_date !== '' && filter.end_date !== '') {
         const filteredTasks = tasks.filter((el) =>
             dateFilter(el) &&
             el.priority === filter.priority &&
             el.assignees.toUpperCase() === filter.assigneeName.toUpperCase())
         setTasks(filteredTasks)
-        alert(`${filteredTasks.length} Result Found`);
+        setTimeout(() => {
+            alert(`${filteredTasks.length} Result Found`);
+        }, 1000);
     } else {
         getAllTasks();
     }

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import OptionBtn from '../../icons/OptionBtn';
 import taskContext from '../../CONTEXT/context/taskContext';
+import Spinner from '../../icons/Spinner';
 
 
 
@@ -18,6 +19,7 @@ export default function DeployedTaskCard() {
       <div className="card pb-2" style={{ width: "100%" }}>
         <h5 className="card-title bg-primary p-2 text-light rounded-top bold">Deployed</h5>
         {tasks && tasks.filter(el => el.status === 'deployed').length === 0 && <h6 className='text-danger mt-2 height-230 dfjcac'>No Tasks</h6>}
+        {tasks==='' && <div className='dfjcac height-230'><Spinner height={35} width={35} /></div>}
         {tasks && tasks.filter(el => el.status === 'deployed').map((task, index) => {
           return (
           <div key={index} className="mx-2 mb-2 bg-secondary-light">
