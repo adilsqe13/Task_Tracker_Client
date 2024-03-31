@@ -4,16 +4,13 @@ import taskContext from '../../CONTEXT/context/taskContext';
 
 
 
-export default function InProgressTaskCard() {
+export default function CompletedTaskCard() {
   const { tasks, setTaskDetails } = useContext(taskContext);
 
   const handleClickEdit = async (taskId) => {
     localStorage.setItem('targetEDTaskId', taskId);
     const task = tasks.find((el) => el._id === taskId);
     setTaskDetails(task);
-  }
-  const handleClickDelete = async (taskId) => {
-    localStorage.setItem('targetEDTaskId', taskId);
   }
 
   return (
@@ -56,9 +53,6 @@ export default function InProgressTaskCard() {
                   <ul class="dropdown-menu">
                     <li><button onClick={() => { handleClickEdit(task._id) }} type="button" className="btn" data-bs-toggle="modal" data-bs-target="#editTaskModal">
                       Edit
-                    </button></li>
-                    <li><button onClick={() => { handleClickDelete(task._id) }} type="button" className="btn" data-bs-toggle="modal" data-bs-target="#deleteTaskModal">
-                      Delete
                     </button></li>
                   </ul>
                 </div>
